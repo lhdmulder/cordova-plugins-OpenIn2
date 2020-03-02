@@ -19,10 +19,10 @@ static NSString *const PLUGIN_NAME = @"OpenIn";
                options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options;
 
 {
-NSMutableDictionary* dictionary = @{}.mutableCopy;
+
      if (! [[url scheme] isEqual:@"file"]) {
 [super application:app openURL:url
-sourceApplication:@"" annotation:dictionary];
+options:options];
      }
     if (url == nil) {
 
